@@ -1,0 +1,19 @@
+<section class="container-fluid">
+	<article class="content">
+		<h1 class="blue-heading centered">{{ heading }}</h1>
+		<h3 class="blue-sub-heading">{{ sub_heading }}</h3>
+	</article>
+</section>
+<section class="container-fluid gallery">
+	<!--<header>
+		<h2 class="blue-heading>{{ title }}</h2>
+		{{ content wrap="h2" }}
+	</header>-->
+	<div class="gallery-images">
+		<!--{{ images }}<img src="{{ value }}" />{{ /images }}-->
+		{{ images }}{{ imgix:responsive_image_tag path="{{ value }}" w="1500" auto="format" fit="max" }}{{ /images }}
+	</div>
+	<div class="read-more">
+		<a href="{{ page_url }}">View more Photo Galleries</a>
+	</div>
+</section>

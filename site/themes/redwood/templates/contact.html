@@ -1,0 +1,57 @@
+<section class="regular">
+    <article class="content">
+        <h1 class="blue-heading">{{ heading }}</h1>
+        <h2 class="blue-sub-heading">{{ sub_heading }}</h2>
+        <p>{{ sub_sub_heading }}</p>
+    </article>
+</section>
+
+
+<section class="regular">
+    <article class="content">
+
+        {{ content }}
+
+        {{ form:create in="contact" }}
+
+            {{ if errors }}
+                <div class="alert alert-danger">
+                    {{ errors }}
+                        {{ value }}<br>
+                    {{ /errors }}
+                </div>
+            {{ /if }}
+
+            {{ if success }}
+                <div class="alert alert-success">
+                    Form was submitted successfully.
+                </div>
+            {{ /if }}
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" value="{{ old:name }}" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" name="email" value="{{ old:email }}" class="form-control" />
+            </div>
+
+            <div class="hidden form-group">
+                <label>State</label>
+                <input type="text" name="state" />
+            </div>
+
+            <div class="form-group">
+                <label>Comment</label>
+                <textarea name="comment" class="form-control">{{ old:comment }}</textarea>
+            </div>
+
+            <button class="btn btn-primary">Submit</button>
+
+        {{ /form:create }}
+
+    </article>
+
+</section>

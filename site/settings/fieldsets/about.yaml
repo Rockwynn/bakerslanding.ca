@@ -1,0 +1,18 @@
+title: About
+hide: true
+fields:
+  title:
+    type: text
+    width: 66
+  slug:
+    type: text
+    width: 33
+  content:
+    type: markdown
+    display: Content
+  amenities:
+    type: list
+    display: amenities
+  photo:
+    display: Image URL
+    type: text
