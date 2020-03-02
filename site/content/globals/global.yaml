@@ -1,34 +1,3 @@
 id: d9bfc09a-3a90-41d3-8acc-3f551f8432af
 site_name: Baker's Landing
 author_name: Sandra White - Rockwynn Web Design
-title: 'Site Settings'
-hide: true
-sections:
-  main:
-    fields:
-      head_scripts:
-        mode: table
-        fields:
-          description:
-            type: text
-            display: Description
-          code:
-            type: textarea
-            display: Code
-        type: grid
-        instructions: 'Add meta tags and scripts to the `<head>` area of your site.'
-        display: 'Head Scripts'
-        add_row: Add Code
-      footer_scripts:
-        mode: table
-        fields:
-          description:
-            type: text
-            display: Description
-          code:
-            type: textarea
-            display: Code
-        type: grid
-        instructions: 'Add meta tags and scripts right before closing `</body>` area of your site.'
-        display: 'Footer Scripts'
-        add_row: Add Code
