@@ -1,70 +1,104 @@
 title: 'Rental Application'
-honeypot: username
+honeypot: lastname
 fields:
-  checkindate:
+  Check-In-Date:
     display: 'Check in date - Saturday'
     validate: required
-  checkoutdate:
+  Check-Out-Date:
     display: 'Check out date'
     validate: required
-  name:
+  Name:
     display: Name
     validate: 'required|min:2'
-  email:
+  Email:
     display: 'Email address'
     validate: required|email
-  phonenumber:
-    display: 'Phone number'
-  secondaryphonenumber:
-    display: 'Secondary phone number'
-  address:
+  Home-Phone-Number:
+    display: 'Home Phone number'
+  Cell-Phone-Number:
+    display: 'Cell phone number'
+  Address:
     display: Address
-  city:
+  City:
     display: City
-  provincestate:
+  Province-State:
     display: Province/State
-  postalzipcode:
+  PostalCode-ZipCode:
     display: 'Postal Code - Zip Code'
-  numberyearsataddress:
+  Number-of-Years-at-Address:
     display: 'Number of years at address'
-  ownrent:
+  Owner-Renter:
     display: Own/Rent
     validate: required
-  numberadults:
-    display: Number of adults
+  Employer:
+    display: "Employer's Name and Address"
+  Job-Title:
+    display: 'Job Title'
+  Length-of-Employment:
+    display: 'Length of Employment at Current Job'
+  Drivers-License:
+    display: "Driver's License - Province/State and Number"
+  License-Plate:
+    display: "Vehicle License Plate - Province/State and Number"
+  Insurance-Provider:
+    display: 'Home/Renter Insurance Provider'
+  Policy-Number:
+    display: 'Policy Number'
+  Number-of-Adults:
+    display: 'Number of adults'
     validate: required
-  numberchildren:
-    display: Number of children
+  Number-of-Children:
+    display: 'Number of children'
     validate: required
-  bringingdog:
-    display: Are you bringing a dog?
+  Occupant-Info:
+    display: 'Names, Addresses and Phone Numbers of ALL adults and children occupying Baker’s Landing, including the ages of all children'
+  Bringing-Dog:
+    display: 'Are you bringing a dog?'
     validate: required
-  bringingguests:
-    display: Are you bringing additional guests?
+  Dog-Info:
+    display: "Please provide details of age, breed, size, temperament and training. Please note Baker's Landing has a strict maximum 2 dog policy, and cats are not allowed."
+  Bringing-Guests:
+    display: 'Are you bringing additional guests?'
     validate: required
-  comments:
+  Guest-Info:
+    display: 'If yes, please provide their names and dates of their visit.'
+  Bringing-Boat:
+    display: 'Do you plan on bringing a boat? If so we have plenty of parking space.'
+    validate: required
+  Comment:
     display: 'Please use the area below to add any additional Details, Questions or Comments you may have.'
 columns:
-  - checkindate
-  - checkoutdate
-  - name
-  - phonenumber
-  - email
-  - secondaryphonenumber
-  - address
-  - city
-  - provincestate
-  - postalzipcode
-  - numberyearsataddress
-  - ownrent
-  - numberadults
-  - numberchildren
-  - bringingdog
-  - bringingguests
-  - comments
+  - Check-In-Date
+  - Check-Out-Date
+  - Name
+  - Home-Phone-Number
+  - Email
+  - Cell-Phone-Number
+  - Address
+  - City
+  - Province-State
+  - PostalCode-ZipCode
+  - Number-of-Years-at-Address
+  - Owner-Renter
+  - Employer
+  - Job-Title
+  - Length-of-Employment
+  - Drivers-License
+  - License-Plate
+  - Insurance-Provider
+  - Policy-Number
+  - Number-of-Adults
+  - Number-of-Children
+  - Occupant-Info
+  - Bringing-Dog
+  - Dog-Info
+  - Bringing-Guests
+  - Guest-Info
+  - Bringing-Boat
+  - Comment
 email:
   -
     to: info@bakerslanding.ca
     from: info@bakerslanding.ca
-    reply_to: '{{email}}'
+    reply_to: '{{Email}}'
     subject: 'BL - Rental Application Submission'

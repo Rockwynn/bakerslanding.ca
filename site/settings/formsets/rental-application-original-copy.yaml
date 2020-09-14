@@ -1,0 +1,70 @@
+title: 'Rental Application'
+honeypot: username
+fields:
+  checkindate:
+    display: 'Check in date - Saturday'
+    validate: required
+  checkoutdate:
+    display: 'Check out date'
+    validate: required
+  name:
+    display: Name
+    validate: 'required|min:2'
+  email:
+    display: 'Email address'
+    validate: required|email
+  phonenumber:
+    display: 'Phone number'
+  secondaryphonenumber:
+    display: 'Secondary phone number'
+  address:
+    display: Address
+  city:
+    display: City
+  provincestate:
+    display: Province/State
+  postalzipcode:
+    display: 'Postal Code - Zip Code'
+  numberyearsataddress:
+    display: 'Number of years at address'
+  ownrent:
+    display: Own/Rent
+    validate: required
+  numberadults:
+    display: Number of adults
+    validate: required
+  numberchildren:
+    display: Number of children
+    validate: required
+  bringingdog:
+    display: Are you bringing a dog?
+    validate: required
+  bringingguests:
+    display: Are you bringing additional guests?
+    validate: required
+  comments:
+    display: 'Please use the area below to add any additional Details, Questions or Comments you may have.'
+columns:
+  - checkindate
+  - checkoutdate
+  - name
+  - phonenumber
+  - email
+  - secondaryphonenumber
+  - address
+  - city
+  - provincestate
+  - postalzipcode
+  - numberyearsataddress
+  - ownrent
+  - numberadults
+  - numberchildren
+  - bringingdog
+  - bringingguests
+  - comments
+email:
+  -
+    to: info@bakerslanding.ca
+    from: info@bakerslanding.ca
+    reply_to: '{{email}}'
+    subject: 'BL - Rental Application Submission'
